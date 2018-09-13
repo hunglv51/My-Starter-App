@@ -24,6 +24,8 @@ import {SearchLocationPage} from "../pages/search-location/search-location";
 import {TripDetailPage} from "../pages/trip-detail/trip-detail";
 import {TripsPage} from "../pages/trips/trips";
 import {LocalWeatherPage} from "../pages/local-weather/local-weather";
+import {Facebook} from "@ionic-native/facebook";
+import { LoginService } from '../services/login-service';
 
 // import services
 // end import services
@@ -80,7 +82,9 @@ import {LocalWeatherPage} from "../pages/local-weather/local-weather";
     ActivityService,
     TripService,
     WeatherProvider,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    Facebook,
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    LoginService
   ]
 })
 
